@@ -6,5 +6,6 @@ Description of the contents of this folder and the logic of your data → retina
 
 
 # Sketch 2: Infinity hourglass
+!(https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/process/hourgladd.png)
 
 # Sketch 3: Heart Beat
