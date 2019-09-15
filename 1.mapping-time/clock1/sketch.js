@@ -15,13 +15,12 @@ function setup() {
 	background(0);
 	translate (300, 300);
 	rotate(-90);
-	let hr= hour();
-	let min= minute();
-	let snd= second();
+
+	var now= clock()
   
-	let secondsArc = map(snd, 0, 60, 0, 360);
-	let minutesArc= map(min, 0, 60, 0, 360);
-	let hoursArc= map(hr % 12, 0, 12, 0, 360);
+	var secondsArc = map(now.sec, 0, 60, 0, 360);
+	var minutesArc= map(now.min, 0, 60, 0, 360);
+	var hoursArc= map(now.hour % 12, 0, 12, 0, 360);
 	
   
 	background(0)

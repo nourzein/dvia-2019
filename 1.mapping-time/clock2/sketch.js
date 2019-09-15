@@ -10,21 +10,23 @@ var discrete = false // flag whether to have the bars 'tick' from one value to t
 //this gets called only once in the very beginning
 function setup() {
 	createCanvas(800, 600)
+	rectMode(CORNER)
+
 	
 }
 
 //this gets called every frame (about 60 frames per second)
 function draw() {
   background(0)
-  stroke(255)
+  stroke(245, 201, 236)
 
   // measure the current time & calculate the width in pixels of each bar
   var now = clock()
   if (discrete){
     // the map() function lets us *normalize* a value from a starting range then *project* it into another range
-    var hourHeight = map(now.hour, 1,12, maxHeight, 0) // from hours (1-12) to pixels (0–maxWidth)
-    var minsHeight = map(now.min,  0,60, maxHeight, 0)  // from mins (0–60) to pixels (0–maxWidth)
-    var secsHeight = map(now.sec,  0,60, maxHeight, 0)  // from secs (0–60) to pixels (0–maxWidth)
+    var hourHeight = map(now.hour, 1,12, 0, maxHeight) // from hours (1-12) to pixels (0–maxWidth)
+    var minsHeight = map(now.min,  0,60, 0, maxHeight)  // from mins (0–60) to pixels (0–maxWidth)
+    var secsHeight = map(now.sec,  0,60, 0, maxHeight)  // from secs (0–60) to pixels (0–maxWidth)
   }else{
     // alternatively, we can use the clock's 'progress' percentages
     hourHeight = maxHeight * now.progress.day
@@ -34,7 +36,7 @@ function draw() {
 
   //draw 3 background bars to indicate the max width
   
-  fill(18, 4, 15)
+  fill(51, 11, 41)
   rect(x, y,                         barWidth , maxHeight)
   rect(x + barWidth +spacing, y  ,  barWidth , maxHeight)
   rect(x+ 2*(barWidth +spacing), y, barWidth , maxHeight)
@@ -44,10 +46,10 @@ function draw() {
   rect(x , y , barWidth , secsHeight) 
  
   // ...the minutes bar in the middle...
-  fill(196, 61, 167)
+  fill(191, 55, 158)
   rect(x+ barWidth +spacing, y , barWidth , minsHeight)
 
   // ...and the hour bar at the bottom
-  fill(161, 50, 137)
+  fill(138, 36, 113)
   rect(x + 2*(barWidth +spacing), y, barWidth , hourHeight)
 }
