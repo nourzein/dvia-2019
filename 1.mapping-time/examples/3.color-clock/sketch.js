@@ -17,7 +17,7 @@ function setup() {
   // draw will be called this many times per second
   frameRate(60)
 }
-
+1
 function draw() {
   // check the clock for the current time and unpack some of its fields to generate a time-string
   var now = clock()

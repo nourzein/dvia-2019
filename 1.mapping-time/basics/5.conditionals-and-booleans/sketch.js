@@ -20,14 +20,16 @@ function drawShape(x, y){
   var isLeft = x < width/2 // will be 'true' if x is less than 350
   if (isLeft){
     fill(0)
-  }else{
+  } 
+  else {
     fill(255)
   }
 
   var isUpper = y < height/2 // will be 'false' if y is greater than 200
   if (isUpper){
     circle(x, y, 25)
-  }else{
+  }
+  else{
     rect(x, y, 25, 25)
   }
 }

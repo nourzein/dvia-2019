@@ -1,0 +1,44 @@
+:root {
+	--count: 4;
+	--width: 150px;
+	--totalWidth: calc(var(--width) * var(--count));
+	--height: 300px;
+}
+
+#clock {
+	width: var(--totalWidth);
+	height: var(--height);
+	background-color: hsla(0, 0%, 100%, 0.1);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: calc(-1 * var(--totalWidth) / 2);
+	margin-top: calc(-1 * var(--height) / 2);
+	
+	div {
+		--pos: 100%;
+		
+		width: var(--width);
+		position: absolute;
+		border: 5px solid red;
+		top: var(--pos);
+		box-sizing: border-box;
+		
+		&:not(#millisecond) {
+			transition: 150ms linear top;
+		}
+	}
+	
+	#hour {
+		left: calc(0 * var(--width));
+	}
+	#minute {
+		left: calc(1 * var(--width));
+	}
+	#second {
+		left: calc(2 * var(--width));
+	}
+	#millisecond {
+		left: calc(3 * var(--width));
+	}
+}

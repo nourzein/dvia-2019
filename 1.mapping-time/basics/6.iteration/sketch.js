@@ -66,5 +66,4 @@ function setup() {
     stroke(255 - 30*i)
     line(x, 0, x, 150)
   })
-
 }
