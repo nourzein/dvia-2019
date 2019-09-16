@@ -4,14 +4,14 @@ var barWidth = 150 // width of each bar
 var maxHeight = 500 // maximum width of each bar (the actual width will always be ≤ this)
 var spacing = 10 // the vertical space to skip between bars
 
-var discrete = false // flag whether to have the bars 'tick' from one value to the next or move smoothly,
+var discrete = false// flag whether to have the bars 'tick' from one value to the next or move smoothly,
                     // try setting it to false and see what happens...
 
 //this gets called only once in the very beginning
 function setup() {
 	createCanvas(800, 600)
-	rectMode(CORNER)
-
+  angleMode(DEGREES)
+  translate (400, 300)
 	
 }
 
@@ -35,6 +35,7 @@ function draw() {
   }
 
   //draw 3 background bars to indicate the max width
+  
   
   fill(51, 11, 41)
   rect(x, y,                         barWidth , maxHeight)

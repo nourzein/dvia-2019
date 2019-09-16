@@ -37,7 +37,7 @@ function drawShape(x, y){
 
 // try adjusting these starting positions and notice how the block of shapes
 // changes based on where each individual shape is positioned
-var horiz = 200
+var horiz = 250
 var vert = 50
 
 function draw(){
