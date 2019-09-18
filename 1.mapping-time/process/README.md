@@ -7,15 +7,15 @@ In this interactive depication of time, I use 'acr()' to draw three circles, one
 I use the 'map()' function to "map" the radius of the circles to the length of time for each unit.  
 
 # Sketch 2: Bar Clock
-[bar clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/barclock.png)
+![bar clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/barclock.png)
 I use 3 bars, one for seconds, minutes and hours. They full up accourding to there respective times. The color intensity is a way to distinguish the time, since they are all bars. 
 
 # Sketch 3: Bar Clock2
-[bar clock2](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/barclock2.png)
+![bar clock2](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/barclock2.png)
 I also use the concept of bars for this one, but the bars move freely.
 
 # Sketch 4: Planetary Clock
-[Planet Clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/planetclock.png)
+![Planet Clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/planetclock.png)
 I use earth as the center with a small orbit of the moon representing months, and a much bigger orbit of the sun represting years.
 
 # Sketch 5: Infinity Hourglass
