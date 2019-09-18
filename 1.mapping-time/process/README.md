@@ -6,13 +6,17 @@ Description of the contents of this folder and the logic of your data → retina
 In this interactive depication of time, I use 'acr()' to draw three circles, one for seconds, minutes, and hours. 
 I use the 'map()' function to "map" the radius of the circles to the length of time for each unit.  
 
+# Sketch 2: Bar Clock
+I use 3 bars, one for seconds, minutes and hours. They full up accourding to there respective times. The color intensity is a way to distinguish the time, since they are all bars. 
 
+# Sketch 3: Bar Clock2
+I also use the concept of bars for this one, but the bars move freely.
 
-# Sketch 2: Infinity hourglass
-![Infinity hourglass](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/process/hourgladd.png)
-In this static depiction, I use illustrator to show time in an hour glass. The hourglass movement of sand represents one day, the colors inside the hourglass follow the colors of the sky, from sunrise to sunset. 
-I added the element of the infinity sign as the hourglass shape to represent an inifite number of days, all the same.
+# Sketch 5: Infinity Hourglass
+![Infinity hourglass](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/hourglass_seasons%2Byears.png)
+In this static depiction, I use illustrator to show seasons passing in a year glass. The hourglass movement of sand represents full year, the colors inside the hourglass follow the colors of the seasons, from fall- summer. 
+I added the element of the infinity sign as the hourglass shape to represent an inifite number of years.
 
-# Sketch 3: Circular Seasons
+# Sketch 6: Circular Seasons
 ![Clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/year_seasons.png)
 This depiction I used colors to signify different seasons passing and circular lines for months. The entire clock is one year.
