@@ -7,7 +7,7 @@ var spacing = 10 // the vertical space to skip between bars
 var discrete = false// flag whether to have the bars 'tick' from one value to the next or move smoothly,
                     // try setting it to false and see what happens...
 
-//this gets called only once in the very beginning
+
 function setup() {
 	createCanvas(800, 600)
   angleMode(DEGREES)
@@ -15,7 +15,6 @@ function setup() {
 	
 }
 
-//this gets called every frame (about 60 frames per second)
 function draw() {
   background(0)
   stroke(245, 201, 236)

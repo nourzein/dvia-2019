@@ -3,11 +3,6 @@ function setup() {
 	createCanvas(600, 600);
 	angleMode(DEGREES);
   
-  
-	// print the time to the console once at the beginning of the run. try opening up the
-	// web inspector and poking around to see the various values the clock function gives you
-	// print('starting time:', clock())
-  
   }
   
   function draw() {
