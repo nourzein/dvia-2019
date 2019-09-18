@@ -13,6 +13,6 @@ I use the 'map()' function to "map" the radius of the circles to the length of t
 In this static depiction, I use illustrator to show time in an hour glass. The hourglass movement of sand represents one day, the colors inside the hourglass follow the colors of the sky, from sunrise to sunset. 
 I added the element of the infinity sign as the hourglass shape to represent an inifite number of days, all the same.
 
-# Sketch 3: Heart beat
-![Heart beat](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/process/heartbeat.png)
-This depiction is straightforward. Time is depicted as someone's heartbeat. I use red to emphasize "heart". 
+# Sketch 3: Circular Seasons
+![Clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/year_seasons.png)
+This depiction I used colors to signify different seasons passing and circular lines for months. The entire clock is one year.
