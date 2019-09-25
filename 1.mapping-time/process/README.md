@@ -19,7 +19,8 @@ I also use the concept of bars for this one, but the bars move freely.
 I use earth as the center with a small orbit of the moon representing months, and a much bigger orbit of the sun represting years.
 
 # Sketch 7: Date Clock
-
+![date clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/process/date_clock.png)
+I use the symbol of a normal clock to depict date. The longest is the progress of a day (hours), the second longer hand is progress of a month (days), and the shortest is the progress of a year (months). 
 
 # Sketch 6: Seasonal Clock
 ![Clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/process/seasonal_clock.png)
