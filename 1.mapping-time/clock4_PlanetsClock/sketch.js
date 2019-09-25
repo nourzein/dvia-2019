@@ -20,31 +20,56 @@ function draw() {
   var sRot = now.progress.min * 360;
 
   var r = 30;
-  // var size = r * 2;
+
+  //seasons array
+  var colors = [
+    "#b3330c" /*fall*/,
+    "#820717" /*fall*/,
+    "#a60707" /*fall*/,
+    "#353161" /*winter*/,
+    "#311a59" /*winter*/,
+    "#691b75" /*winter*/,
+    "#f24979" /*spring*/,
+    "#fa37f7" /*spring*/,
+    "#fa3771" /*spring*/,
+    "#2b6e2b" /*summer*/,
+    "#d9d445" /*summer*/,
+    "#9ed945" /*summer*/
+  ];
+  var gradient = chroma.scale(colors).mode("lab");
+  function colorForProgress(pct) {
+    return gradient(pct).hex();
+  }
+
+  var color = colorForProgress(now.progress.year);
 
   r = (now.year - 2018) * r;
   console.log(now.year);
 
+  //earth ellipse
   translate(width / 2, height / 2);
   noStroke();
-  fill(5, 99, 35);
-  ellipse(0, 0, 15, 15);
+  // fill(5, 99, 35);
+  fill(color);
+  ellipse(0, 0, 20, 20);
 
+  //sun arc
   stroke(255, 164, 36);
   strokeWeight(2);
   noFill();
   arc(0, 0, 400, 400, 360, 360);
 
+  //moon arc
   noFill();
   stroke(53, 48, 74);
   strokeWeight(2);
-  arc(0, 0, 50, 50, 0, 360);
+  arc(0, 0, 80, 80, 0, 360);
 
   //month ellipse
   push();
   rotate(dayArc);
   fill(97, 84, 153);
-  ellipse(0, 25, 10, 10);
+  ellipse(0, 40, 15, 15);
 
   pop();
 
