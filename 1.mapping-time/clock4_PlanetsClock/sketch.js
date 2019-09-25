@@ -19,6 +19,12 @@ function draw() {
 
   var sRot = now.progress.min * 360;
 
+  var r = 30;
+  // var size = r * 2;
+
+  r = (now.year - 2018) * r;
+  console.log(now.year);
+
   translate(width / 2, height / 2);
   noStroke();
   fill(5, 99, 35);
@@ -34,6 +40,7 @@ function draw() {
   strokeWeight(2);
   arc(0, 0, 50, 50, 0, 360);
 
+  //month ellipse
   push();
   rotate(dayArc);
   fill(97, 84, 153);
@@ -41,9 +48,10 @@ function draw() {
 
   pop();
 
+  //year ellipse
   push();
   rotate(monthsArc);
   fill(208, 20, 70);
-  ellipse(0, 200, 30, 30);
+  ellipse(0, 200, r, r);
   pop();
 }

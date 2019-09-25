@@ -23,7 +23,6 @@ var gradient = chroma.scale(colors).mode("lab");
 function colorForProgress(pct) {
   return gradient(pct).hex();
 }
-
 function draw() {
   translate(width / 2, height / 2);
   var now = clock();
