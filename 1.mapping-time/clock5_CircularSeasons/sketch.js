@@ -8,12 +8,16 @@ function setup() {
 var colors = [
   "#b3330c" /*fall*/,
   "#820717" /*fall*/,
+  "#a60707" /*fall*/,
   "#353161" /*winter*/,
   "#311a59" /*winter*/,
+  "#691b75" /*winter*/,
   "#f24979" /*spring*/,
   "#fa37f7" /*spring*/,
+  "#fa3771" /*spring*/,
   "#2b6e2b" /*summer*/,
-  "#d9d445" /*summer*/
+  "#d9d445" /*summer*/,
+  "#9ed945" /*summer*/
 ];
 var gradient = chroma.scale(colors).mode("lab");
 function colorForProgress(pct) {
