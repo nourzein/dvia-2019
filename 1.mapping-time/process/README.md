@@ -27,7 +27,11 @@ I use the symbol of a normal clock to depict date. The longest is the progress o
 This depiction I used colors to signify different seasons passing and circular lines for months. The entire clock is one year.
 I use blueish purple palette for winter, yellowish orange for spring, green for summer, and reddish copper for fall.
 
-# Sketch 7: Infinity Hourglass
+# Sketch 7: Planetary Calendar
+![planet clock](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/clock7.png)
+This clock depicts seasons in the middle ellipse by color. The middle ellipse is 'earth', and chaging color follows earth changing color over the seasons. It depicts months by the purple orbit. It depicts years by the red ball orbit that represents the sun. As years progress, physics says that the sun keeps expanding. I tried to emmulate that by having the sun get bigger year after year.  
+
+# Sketch 8: Infinity Hourglass (Not Coded)
 ![Infinity hourglass](https://github.com/nourzein/dvia-2019/blob/master/1.mapping-time/hourglass_seasons%2Byears.png)
 In this static depiction, I use illustrator to show seasons passing in a year glass. The hourglass movement of sand represents full year, the colors inside the hourglass follow the colors of the seasons, from fall- summer. 
 I added the element of the infinity sign as the hourglass shape to represent an inifite number of years.
