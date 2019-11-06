@@ -11,17 +11,17 @@ function preload() {
 }
 
 function setup() {
-  var canvasW = 300;
-  var canvasH = 200;
+  //   var canvasW = 300;
+  //   var canvasH = 200;
 
-  if (shouldExport) {
-    createCanvas(canvasW, canvasH, SVG);
-  } else {
-    createCanvas(canvasW, canvasH);
-  }
+  //   if (shouldExport) {
+  //     createCanvas(canvasW, canvasH, SVG);
+  //   } else {
+  //     createCanvas(canvasW, canvasH);
+  //   }
   // Add a final argument of `SVG` to your createCanvas command
-  //createCanvas(300, 200, SVG);
-  //createCanvas(4500, 900, SVG);
+  createCanvas(4500, 700);
+  //createCanvas(600, 300, SVG);
   background(0);
   angleMode(DEGREES);
 
@@ -62,14 +62,19 @@ function setup() {
   //   }
   // draw year labels in the header row
   x = 50;
-  y = 520;
+  y = 700;
   textStyle(NORMAL);
   textAlign(BOLD, CENTER);
   for (var r = 0; r < table.getRowCount(); r++) {
     var year = table.getString(r, 0);
     text(year, x, y - rowHeight);
+
     x += colWidth;
   }
+
+  fill(255);
+  stroke(4);
+  line(50, 600, 4000, 600);
 
   // print out the total for each country, one column at a time
   x = 50;
@@ -78,7 +83,7 @@ function setup() {
     y = 300;
 
     for (var c = 1; c < table.getColumnCount(); c++) {
-      var cell = atmospheric.getNum(r, c) * 4;
+      var cell = table.getNum(r, c) * 4;
       var bell = underground.getNum(r, c) * 4;
       //var value = map(cell, 0, 100, 1, 180);
       //fill(255, 128, 128, 220);
@@ -90,21 +95,17 @@ function setup() {
       noFill();
       stroke(clr);
       strokeWeight(1);
-      arc(x, y, bell, bell, 1, 180);
-
-      // push();
-      // rotate(180);
-      arc(x, y, cell, cell, 180, 0);
-      // pop();
-      //ellipse(x, y, 50, cell);
+      ellipse(x, y, 50, cell);
       //text(value, x, y);
       //   y += rowHeight;
     }
+
     x += colWidth;
   }
-  if (shouldExport) {
-    createCanvas(canvasW, canvasH, SVG);
-  } else {
-    createCanvas(canvasW, canvasH);
-  }
+  //save("my-sketch.svg");
+  //   if (shouldExport) {
+  //     createCanvas(canvasW, canvasH, SVG);
+  //   } else {
+  //     createCanvas(canvasW, canvasH);
+  //   }
 }
