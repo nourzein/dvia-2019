@@ -16,7 +16,7 @@ console.log(underground);
 function setup() {
   // Add a final argument of `SVG` to your createCanvas command
 
-  createCanvas(1690, 1000, SVG);
+  createCanvas(1690, 1000);
   background(0);
   angleMode(DEGREES);
   textAlign(CENTER);
@@ -134,5 +134,5 @@ function setup() {
     x += colWidth;
   }
 
-  save("my-sketch.svg");
+  // save("my-sketch.svg");
 }
