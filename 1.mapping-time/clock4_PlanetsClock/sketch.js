@@ -1,4 +1,5 @@
 //Planets clock
+let myData;
 
 function setup() {
   createCanvas(800, 800);

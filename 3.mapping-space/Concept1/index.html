@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../libraries/leaflet/leaflet.css" />
+    <!-- default styles -->
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        /* background: red; */
+      }
+
+      /* default dimensions for the leaflet map */
+      #earthquakeMap {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #canvas {
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        /* padding: 2rem; */
+        /* transform: translateX(100%); */
+        /* transition: 0.3s all ease-in-out; */
+      }
+
+      .intro {
+        z-index: 9999;
+      }
+
+      .title {
+        position: absolute;
+        right: 7%;
+        top: 20px;
+        color: white;
+        width: 300px;
+        text-align: center;
+      }
+
+      .description {
+        position: absolute;
+        right: 7%;
+        top: 100px;
+        width: 350px;
+        color: white;
+        font-size: 92%;
+        /* text-align:  */
+      }
+      /* #show {
+        transform: translateX(0);
+        transition: 0.3s all ease-in-out;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="canvas">
+        <div class="intro">
+          <p class="title">
+            Significant Earthquakes of October
+          </p>
+          <p class="description">
+            Earthquakes are naturally destructive effects of our planet's
+            constantly changing surface. This past October, there were 12
+            significant earthquakes occuring all over the world with an average
+            depth of 10 km and magitide of 6.5.
+          </p>
+          <!-- p5.js will create a canvas element here at runtime -->
+        </div>
+      </div>
+      <!-- The container div for our leaflet map -->
+      <div id="earthquakeMap"></div>
+    </div>
+    <!-- load our dependencies and sketch file -->
+    <script src="../libraries/leaflet/leaflet.js"></script>
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.dom.min.js"></script>
+    <script src="../libraries/lodash.min.js"></script>
+    <script src="../libraries/brewer.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
