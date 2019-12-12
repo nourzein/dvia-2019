@@ -2,6 +2,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../libraries/leaflet/leaflet.css" />
+    <script src="libraries/leaflet-geometryutil.js"></script>
+    <script src="../libraries/leaflet/leaflet.js"></script>
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.dom.min.js"></script>
+    <script src="../libraries/lodash.min.js"></script>
+    <script src="../libraries/brewer.js"></script>
+    <script src="libraries/cities.js"></script>
     <!-- default styles -->
     <style>
       html,
@@ -21,6 +28,8 @@
         position: absolute;
         right: 0;
         z-index: 999;
+        width: 400px;
+        background-color: black;
         /* padding: 2rem; */
         /* transform: translateX(100%); */
         /* transition: 0.3s all ease-in-out; */
@@ -28,22 +37,24 @@
 
       .intro {
         z-index: 9999;
+        color: white;
+        position: absolute;
+        right: 0;
       }
 
       .title {
-        position: absolute;
+        /* position: absolute;
         right: 7%;
-        top: 20px;
-        color: white;
-        width: 300px;
+        top: 20px; */
         text-align: center;
+        /* width: 300px; */
       }
 
       .description {
-        position: absolute;
+        /* position: absolute;
         right: 7%;
-        top: 100px;
-        width: 350px;
+        top: 100px; */
+        /* width: 350px; */
         color: white;
         font-size: 92%;
         /* text-align:  */
@@ -67,6 +78,9 @@
             significant earthquakes occuring all over the world with an average
             depth of 10 km and magitide of 6.5.
           </p>
+          <p class="metrics">
+            <!-- <p>Mag: <span class="mag"></span></p> -->
+          </p>
           <!-- p5.js will create a canvas element here at runtime -->
         </div>
       </div>
@@ -74,11 +88,7 @@
       <div id="earthquakeMap"></div>
     </div>
     <!-- load our dependencies and sketch file -->
-    <script src="../libraries/leaflet/leaflet.js"></script>
-    <script src="../libraries/p5.min.js"></script>
-    <script src="../libraries/p5.dom.min.js"></script>
-    <script src="../libraries/lodash.min.js"></script>
-    <script src="../libraries/brewer.js"></script>
+
     <script src="sketch.js"></script>
   </body>
 </html>
