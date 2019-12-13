@@ -1,7 +1,7 @@
 // variables
 var table;
 var mymap;
-const width = 400;
+const width = 450;
 const height = window.innerHeight;
 const markerData = [];
 let data;
@@ -30,11 +30,11 @@ function measureDirection(srcLat, srcLng, dstLat, dstLng) {
 }
 
 function setup() {
-  background(0);
   let cnv = createCanvas(width, height);
   cnv.parent("#canvas");
   background(0);
-  translate(width / 2, height / 2);
+
+  translate(width / 2, height / 1.8);
 
   // first, call our map initialization function (look in the html's style tag to set its dimensions)
   setupMap();
@@ -87,13 +87,15 @@ function setupMap() {
   // https://leaflet-extras.github.io/leaflet-providers/preview/
   L.tileLayer(
     //"https://api.mapbox.com/styles/v1/nourzein/ck36l9ya309rz1cmr9ymzximc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
-    //"https://api.mapbox.com/styles/v1/nourzein/cjdtac0gp437g2sn57n6fb9za/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
-    "https://api.mapbox.com/styles/v1/nourzein/ck36l9ya309rz1cmr9ymzximc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
+    // "https://api.mapbox.com/styles/v1/nourzein/cjdtac0gp437g2sn57n6fb9za/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
+    "https://api.mapbox.com/styles/v1/nourzein/ck44jf7cn153m1cmtmnxnyba7/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
+    // "https://api.mapbox.com/styles/v1/nourzein/ck36l9ya309rz1cmr9ymzximc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
+    // "https://api.mapbox.com/styles/v1/nourzein/ck36l9ya309rz1cmr9ymzximc/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg",
     {
       attribution:
         'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
       maxZoom: 18,
-      id: "mapbox.light",
+      id: "mapbox.dark",
       accessToken:
         "pk.eyJ1Ijoibm91cnplaW4iLCJhIjoiY2pkcGIzZmFpMGU2ODMzcGZrcjU0ZXAwbyJ9.XzdB3fcBU9caHJoJe3vSOg"
     }
@@ -101,14 +103,28 @@ function setupMap() {
 }
 
 function addCircles() {
+  var palette = chroma.scale("YlOrBr").mode("lch");
   noFill();
-  stroke("red");
-
+  // stroke("red");
+  stroke("green");
   ellipse(0, 0, 400, 400);
   stroke("green");
   ellipse(0, 0, 300, 300);
   ellipse(0, 0, 200, 200);
   ellipse(0, 0, 100, 100);
+
+  push();
+  // stroke("green");
+  fill("green");
+  // strokeWeight(1);
+  // stroke
+  textSize(10);
+  text("5,560 km", -22, -55);
+  text("1120 km", -22, -105);
+  text("16680 km", -22, -155);
+  text("22240 km", -22, -205);
+
+  pop();
 
   // stroke("green");
   // line(-400, 0, 400, 0);
@@ -117,11 +133,11 @@ function addCircles() {
   // calculate minimum and maximum values for magnitude and depth
   var magnitudeMin = 0.0;
   var magnitudeMax = columnMax(table, "mag");
-  console.log("magnitude range:", [magnitudeMin, magnitudeMax]);
+  // console.log("magnitude range:", [magnitudeMin, magnitudeMax]);
 
   var depthMin = 0.0;
   var depthMax = columnMax(table, "depth");
-  console.log("depth range:", [depthMin, depthMax]);
+  // console.log("depth range:", [depthMin, depthMax]);
   // step through the rows of the table and add a dot for each event
   for (var i = 0; i < table.getRowCount(); i++) {
     var row = table.getRow(i);
@@ -140,10 +156,10 @@ function addCircles() {
       color: "red", // the dot stroke color
       fill: true,
       fillColor: "#f03", // the dot fill color
-      fillOpacity: 0.5, // use some transparency so we can see overlaps
-      radius: 105000,
+      fillOpacity: 0.4, // use some transparency so we can see overlaps
+      radius: 109000,
       //row.getNum("mag"),
-      weight: 1
+      weight: 2
     });
 
     // place the new dot on the map
@@ -176,7 +192,7 @@ function addCircles() {
     // );
   }
 
-  console.log(markerData);
+  // console.log(markerData);
 
   // console.log(markerData);
 
@@ -193,12 +209,27 @@ function addCircles() {
     circ.addEventListener("mouseover", () => {
       background(0);
       noFill();
-      stroke("red");
-      ellipse(0, 0, 400, 400);
+      // stroke("red");
+      stroke(10);
       stroke("green");
+
+      ellipse(0, 0, 400, 400);
+      // stroke("green");
       ellipse(0, 0, 300, 300);
       ellipse(0, 0, 200, 200);
       ellipse(0, 0, 100, 100);
+      push();
+      // stroke("green");
+      fill("green");
+      // strokeWeight(1);
+      // stroke
+      textSize(10);
+      text("5,560 km", -22, -55);
+      text("1120 km", -22, -105);
+      text("16680 km", -22, -155);
+      text("22240 km", -22, -205);
+
+      pop();
       // drawGrid(i);
       const data2 = markerData[j];
 
@@ -220,29 +251,51 @@ function addCircles() {
           row.getNum("longitude")
         );
         // console.log(directions);
-        fill("blue");
+        d = map(distances, 10, 22250, 0, 200);
+        c1 = color(252, 210, 0);
+        c2 = color(250, 12, 0);
+        // var palette = Brewer.qualitative("Set1.6", table.columns);
+        // dp = map(row.getNum("depth"), 10, 280, 0, 1, true);
+        // console.log(row.getNum("depth"));
+        // console.log("****" + dp);
+        // c = lerpColor(c1, c2, dp);
+        f = map(
+          Math.log(row.getNum("depth")),
+          Math.log(10),
+          Math.log(580),
+          0.2,
+          1
+        );
         stroke("black");
+        fill(palette(f).hex());
+        // noFill();
+        // console.log(c);
+        // stroke("yellow");
+        // fill(2, 18, 166);
+        // fill(1, 10, 135);
+        // stroke("black");
 
         if (j === m) {
           // stroke("yellow");
-          fill(161, 10, 2);
+          strokeWeight(3);
+          stroke(255, 0, 34);
         }
         // j === m ? stroke("yellow") : stroke("none");
 
         ellipse(
-          getCircleX(directions, map(distances, 10, 22250, 0, 200)),
-          getCircleY(directions, map(distances, 10, 22250, 0, 200)),
-          row.getNum("mag") ** 2,
-          row.getNum("mag") ** 2
+          getCircleX(directions, d),
+          getCircleY(directions, d),
+          row.getNum("mag") ** 1.8,
+          row.getNum("mag") ** 1.8
         );
-        console.log(
-          getCircleX(directions, map(distances, 10, 22250, 0, 400)),
-          getCircleY(directions, map(distances, 10, 22250, 0, 400))
-        );
+        // console.log(
+        //   getCircleX(directions, map(distances, 10, 22250, 0, 400)),
+        //   getCircleY(directions, map(distances, 10, 22250, 0, 400))
+        // );
       }
 
-      metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Distance: ${data2.distance}<br> Population: ${data2.population} <br> Direction: ${data2.direction}<br> City: ${data2.city}, ${data2.country} `;
-
+      metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Population: ${data2.population} <br> City: ${data2.city}, ${data2.country} `;
+      // metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Distance: ${data2.distance}<br> Population: ${data2.population} <br> Direction: ${data2.direction}<br> City: ${data2.city}, ${data2.country} `;
       // myCircles.forEach((circ, l) => {
       //   const data3 = markerData[l];
       //   c1 = color(245, 215, 66);
