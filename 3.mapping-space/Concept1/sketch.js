@@ -294,7 +294,7 @@ function addCircles() {
         // );
       }
 
-      metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Population: ${data2.population} <br> City: ${data2.city}, ${data2.country} `;
+      metrics.innerHTML = `Magnitude: ${data2.mag}<br> Depth: ${data2.depth}<br> Population: ${data2.population} <br> City: ${data2.city}, ${data2.country} `;
       // metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Distance: ${data2.distance}<br> Population: ${data2.population} <br> Direction: ${data2.direction}<br> City: ${data2.city}, ${data2.country} `;
       // myCircles.forEach((circ, l) => {
       //   const data3 = markerData[l];
