@@ -191,6 +191,14 @@ function addCircles() {
 
   myCircles.forEach((circ, j) => {
     circ.addEventListener("mouseover", () => {
+      background(0);
+      noFill();
+      stroke("red");
+      ellipse(0, 0, 400, 400);
+      stroke("green");
+      ellipse(0, 0, 300, 300);
+      ellipse(0, 0, 200, 200);
+      ellipse(0, 0, 100, 100);
       // drawGrid(i);
       const data2 = markerData[j];
 
@@ -202,7 +210,8 @@ function addCircles() {
           row.getNum("latitude"),
           row.getNum("longitude")
         );
-        console.log(distances);
+
+        // console.log(distances);
 
         var directions = measureDirection(
           data2.latitude,
@@ -210,43 +219,55 @@ function addCircles() {
           row.getNum("latitude"),
           row.getNum("longitude")
         );
-        console.log(directions);
+        // console.log(directions);
+        fill("blue");
+        stroke("black");
+
+        if (j === m) {
+          // stroke("yellow");
+          fill(161, 10, 2);
+        }
+        // j === m ? stroke("yellow") : stroke("none");
+
+        ellipse(
+          getCircleX(directions, map(distances, 10, 22250, 0, 200)),
+          getCircleY(directions, map(distances, 10, 22250, 0, 200)),
+          row.getNum("mag") ** 2,
+          row.getNum("mag") ** 2
+        );
+        console.log(
+          getCircleX(directions, map(distances, 10, 22250, 0, 400)),
+          getCircleY(directions, map(distances, 10, 22250, 0, 400))
+        );
       }
 
       metrics.innerHTML = `Mag: ${data2.mag}<br> Depth: ${data2.depth}<br> Distance: ${data2.distance}<br> Population: ${data2.population} <br> Direction: ${data2.direction}<br> City: ${data2.city}, ${data2.country} `;
-      background(0);
-      noFill();
-      stroke("red");
-      ellipse(0, 0, 400, 400);
-      stroke("green");
-      ellipse(0, 0, 300, 300);
-      ellipse(0, 0, 200, 200);
-      ellipse(0, 0, 100, 100);
-      myCircles.forEach((circ, l) => {
-        const data3 = markerData[l];
-        c1 = color(245, 215, 66);
-        c2 = color(250, 12, 0);
-        d = map(data3.depth, 0, 53, 0, 255);
-        var c = lerpColor(c1, c2, d);
-        stroke("blue");
-        fill(c);
-        console.log(c);
 
-        ellipse(
-          getCircleX(data3.direction, data3.depth * 2),
-          getCircleY(data3.direction, data3.depth * 2),
-          data3.mag ** 2,
-          data3.mag ** 2
-        );
-      });
-      stroke("yellow");
-      // strokewidth("4")
-      ellipse(
-        getCircleX(data2.direction, data2.depth * 2),
-        getCircleY(data2.direction, data2.depth * 2),
-        data2.mag ** 2,
-        data2.mag ** 2
-      );
+      // myCircles.forEach((circ, l) => {
+      //   const data3 = markerData[l];
+      //   c1 = color(245, 215, 66);
+      //   c2 = color(250, 12, 0);
+      //   d = map(data3.depth, 0, 53, 0, 255);
+      //   var c = lerpColor(c1, c2, d);
+      //   stroke("blue");
+      //   fill(c);
+      //   // console.log(c);
+      //   ellipse(
+      //     getCircleX(data3.direction, data3.depth * 2),
+      //     getCircleY(data3.direction, data3.depth * 2),
+      //     data3.mag ** 2,
+      //     data3.mag ** 2
+      //   );
+      // });
+
+      // stroke("yellow");
+      // // strokewidth("4")
+      // ellipse(
+      //   getCircleX(data2.direction, data2.depth * 2),
+      //   getCircleY(data2.direction, data2.depth * 2),
+      //   data2.mag ** 2,
+      //   data2.mag ** 2
+      // );
 
       // ellipse(0, 0, data.mag * 10, (data.depth / data.mag) * 10);
       // line(0, 0, data.mag * 10, 0);
