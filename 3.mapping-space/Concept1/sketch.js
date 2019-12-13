@@ -103,9 +103,11 @@ function setupMap() {
 }
 
 function addCircles() {
+  //intial view
   var palette = chroma.scale("YlOrBr").mode("lch");
   noFill();
   // stroke("red");
+  strokeWeight(2);
   stroke("green");
   ellipse(0, 0, 400, 400);
   stroke("green");
@@ -116,6 +118,7 @@ function addCircles() {
   push();
   // stroke("green");
   fill("green");
+  strokeWeight(1);
   // strokeWeight(1);
   // stroke
   textSize(10);
@@ -210,25 +213,22 @@ function addCircles() {
       background(0);
       noFill();
       // stroke("red");
-      stroke(10);
+      strokeWeight(2);
       stroke("green");
-
       ellipse(0, 0, 400, 400);
-      // stroke("green");
       ellipse(0, 0, 300, 300);
       ellipse(0, 0, 200, 200);
       ellipse(0, 0, 100, 100);
+
       push();
-      // stroke("green");
       fill("green");
-      // strokeWeight(1);
-      // stroke
+      strokeWeight(1);
+      stroke("green");
       textSize(10);
       text("5,560 km", -22, -55);
       text("1120 km", -22, -105);
       text("16680 km", -22, -155);
       text("22240 km", -22, -205);
-
       pop();
       // drawGrid(i);
       const data2 = markerData[j];
@@ -277,7 +277,7 @@ function addCircles() {
 
         if (j === m) {
           // stroke("yellow");
-          strokeWeight(3);
+          // strokeWeight(3);
           stroke(255, 0, 34);
         }
         // j === m ? stroke("yellow") : stroke("none");
