@@ -2,7 +2,7 @@
 var table;
 var mymap;
 const width = 450;
-const height = window.innerHeight;
+const height = 1500;
 const markerData = [];
 let data;
 
@@ -34,7 +34,7 @@ function setup() {
   cnv.parent("#canvas");
   background(0);
 
-  translate(width / 2, height / 1.8);
+  translate(width / 2, height / 2.6);
 
   // first, call our map initialization function (look in the html's style tag to set its dimensions)
   setupMap();
