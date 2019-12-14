@@ -2,7 +2,7 @@
 var table;
 var mymap;
 const width = 450;
-const height = window.innerHeight;
+const height = 1500;
 const markerData = [];
 let data;
 
