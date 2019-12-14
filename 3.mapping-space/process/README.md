@@ -17,4 +17,4 @@ Look at all earthquakes in Japan through time, with magnitude and intensity.
 
 #Sketch 4: Diagram
 Group markers by location/hemisphere
-![sketch4](https://github.com/nourzein/dvia-2019/blob/master/3.mapping-space/Concept1/sketch4jpg)
+![sketch4](https://github.com/nourzein/dvia-2019/blob/master/3.mapping-space/Concept1/sketch4.jpg)
