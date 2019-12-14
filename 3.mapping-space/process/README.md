@@ -14,3 +14,7 @@ Look at depth, mag, and intensity?
 #Sketch 3: All Earthquakes in Japan
 Look at all earthquakes in Japan through time, with magnitude and intensity.
 ![sketch3](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-space/Concept1/sketch3_space.jpg)
+
+#Sketch 4: Diagram
+Group markers by location/hemisphere
+![sketch4](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-space/Concept1/sketch4jpg)
