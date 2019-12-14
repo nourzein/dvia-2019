@@ -22,5 +22,5 @@ I want to compare the top nuclear explosion blasts to each other and to new york
 
 Instead of doing a simple line graph for treaties, I will try to use retinal variables.
 These are two different variations of treaties data.
-![circle](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-quantities/process/circles.jpeg)
-![spider](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-quantities/process/spider.jpeg)
+![circle](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-quantities/circles.jpeg)
+![spider](https://github.com/nourzein/dvia-2019/blob/master/2.mapping-quantities/spider.jpeg)
