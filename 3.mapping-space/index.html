@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../libraries/leaflet/leaflet.css" />
+    <script src="libraries/leaflet-geometryutil.js"></script>
+    <script src="../libraries/leaflet/leaflet.js"></script>
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.dom.min.js"></script>
+    <script src="../libraries/lodash.min.js"></script>
+    <script src="../libraries/brewer.js"></script>
+    <script src="../libraries/chroma.min.js"></script>
+    <script src="libraries/cities.js"></script>
+    <!-- default styles -->
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        /* background: red; */
+      }
+
+      /* default dimensions for the leaflet map */
+      #earthquakeMap {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #canvas {
+        position: absolute;
+        left: 0;
+        z-index: 999;
+        width: 450px;
+        background-color: black;
+        border-color: white;
+        /* padding: 2rem; */
+        /* transform: translateX(100%); */
+        /* transition: 0.3s all ease-in-out; */
+      }
+
+      .leaflet-top.leaflet-left {
+        left: unset;
+        right: 0;
+      }
+
+      .intro {
+        z-index: 9999;
+        color: white;
+        position: absolute;
+        right: 0;
+        margin: 30px;
+        margin-top: 15px;
+      }
+
+      .title {
+        /* position: absolute;
+        right: 7%;
+        top: 20px; */
+        text-align: left;
+        font-size: 25px;
+        color: red;
+        border-bottom: 1px solid green;
+        /* width: 300px; */
+      }
+
+      .description {
+        /* position: absolute;
+        right: 7%;
+        top: 100px; */
+        /* width: 350px; */
+        color: white;
+        font-size: 105%;
+        text-align: justify;
+        /* padding: 12px; */
+        /* margin: 45px; */
+        /* text-align:  */
+      }
+
+      .metricsTitle {
+        position: absolute;
+        bottom: -520px;
+        text-align: left;
+        font-size: 25px;
+        color: red;
+        border-bottom: 1px solid green;
+        width: 100%;
+        /* margin-bottom: 10px; */
+      }
+
+      .metrics {
+        position: absolute;
+        bottom: -630px;
+        /* padding-top: 12px; */
+        /* margin-bottom: 12px; */
+      }
+
+      .images {
+        width: 25%;
+        position: absolute;
+        bottom: -710px;
+        right: 0px;
+      }
+      /* .screenshot2 {
+        width: 125%;
+        margin-right: 20px;
+      } */
+
+      /* #show {
+        transform: translateX(0);
+        transition: 0.3s all ease-in-out;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="canvas">
+        <div class="intro">
+          <p class="title">
+            Earthquake Radar
+          </p>
+          <p class="description">
+            Earthquakes are natural consequeces of our planet's constantly
+            changing surface. This past October, there were 12 significant
+            earthquakes occuring all over the world with an average depth of 10
+            km and magitide of 6.5.
+            <br /><br />The people most affected are usually those living in the
+            closest cities.
+          </p>
+          <p class="description2">
+            Explore each earthquake on the map and see what is the closest city,
+            looking at all the other earthquakes relative to that city as well.
+          </p>
+          <div class="images">
+            <img
+              src="./bothh.png"
+              alt="magnitude"
+              class="screenshot1"
+              width="100%"
+            />
+            <!-- <br />
+            <br />
+            <img
+              src="./depthleft.png"
+              alt="depth"
+              class="screenshot2"
+              width="120%"
+            /> -->
+          </div>
+          <div class="metricsTitle">
+            Metrics
+          </div>
+          <p class="metrics">
+            <!-- <p>Mag: <span class="mag"></span></p> -->
+          </p>
+          <!-- p5.js will create a canvas element here at runtime -->
+        </div>
+      </div>
+      <!-- The container div for our leaflet map -->
+      <div id="earthquakeMap"></div>
+    </div>
+    <!-- load our dependencies and sketch file -->
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
